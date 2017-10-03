@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      ค้นหา
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div style="margin-top: 40px"></div>
+  <div class="row"><div class="col-12">ค้นหาด้วย ชื่อ / อีเมล์ ของผู้ร่วมงาน</div></div>
+  <ion-searchbar name="searchTag" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>
